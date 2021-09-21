@@ -1,0 +1,30 @@
+﻿syntax = "proto3";
+import "google/protobuf/empty.proto";
+
+option csharp_namespace = "GrpcServiceTest";
+
+package cat;
+
+// The cat service definition.
+service Cat {
+  // demo for using parameter
+  rpc Feed (CatFood) returns (HungerStatus);
+
+  // demo for empty parameter
+  rpc IncreaseCount (google.protobuf.Empty) returns (Count);
+}
+
+// Feed request
+message CatFood {
+  string food_name = 1;
+}
+
+// Feed response
+message HungerStatus {
+  string status = 1;
+}
+
+// IncreaseCount response
+message Count {
+  int32 count = 1;
+}
