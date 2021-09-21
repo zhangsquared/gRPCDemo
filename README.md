@@ -12,9 +12,11 @@
 * _Models_: POCO entity
 
 If the business logic is simple enough, it can be written directly into _APIs_ layer (without _Services_ layer)
+
 In development environment, the application is configured to be hosted on "https://localhost:5002"
 
 **GrpcSampleServiceTest**
+
 A client-side test (intergrated test)
 
 ### How to use the application
